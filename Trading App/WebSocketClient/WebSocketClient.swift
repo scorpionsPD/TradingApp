@@ -34,15 +34,14 @@ class FinnhubWebSocketClient: WebSocketDelegate {
     }
     
     func subscribeToData() {
-        let subscriptionData = """
-        {
-            "type": "subscribe",
-            "symbol": "AAPL"
-        }
-        """
-        socket?.write(string: subscriptionData)
+        subscribe(symbol: "AAPL")
+        subscribe(symbol: "TSLA")
     }
-    
+    private func subscribe(symbol: String) {
+        let json = ["type": "subscribe", "symbol": symbol]
+        let data = try! JSONEncoder().encode(json)
+        socket?.write(data: data)
+    }
     private func handleData(_ data: String) {
         // Parse the received WebSocket data
         guard let jsonData = data.data(using: .utf8) else {
@@ -59,7 +58,6 @@ class FinnhubWebSocketClient: WebSocketDelegate {
             print("Error parsing JSON: \(error.localizedDescription)")
         }
     }
-    
 }
 
 // MARK: Modal

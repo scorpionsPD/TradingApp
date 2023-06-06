@@ -14,15 +14,14 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
+        // Initialize the WebSocket and UITableView
         initializeWebSocket()
         initializeTableView()
     }
     
-    // Initialize the UITableView
+    // MARK: - View Setup
+    
     private func initializeTableView() {
-        
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
@@ -32,30 +31,28 @@ class MainScreenViewController: UIViewController {
         
         // Add the UITableView to the view hierarchy
         view.addSubview(tableView)
-        
     }
     
-    // Initialize the WebSocket
     private func initializeWebSocket() {
         viewModel = CompanyListViewModel()
+        
+        // Fetch company data and update the table view
         viewModel.fetchCompanyData()
         viewModel.needToRefresh = {
             self.tableView.reloadData()
         }
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
 }
 
-extension MainScreenViewController: UITableViewDelegate,UITableViewDataSource {
+extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - UITableViewDataSource methods
     
@@ -71,10 +68,6 @@ extension MainScreenViewController: UITableViewDelegate,UITableViewDataSource {
         let company = viewModel.getCompany(at: indexPath.row)
         
         // Configure the cell
-//        cell.symbolLabel.text = "AAPL"
-//        cell.priceLabel.text = "$178.74"
-//        cell.differenceLabel.text = "+2.34 (1.32%)"
-        
         cell.cellData = company
         
         return cell
@@ -87,3 +80,4 @@ extension MainScreenViewController: UITableViewDelegate,UITableViewDataSource {
         print("Selected row \(indexPath.row + 1)")
     }
 }
+
