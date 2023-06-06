@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6514B4638842BA983C12044 /* Pods_Trading_App_Trading_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFA4612FD3A4D5FC482D8A9 /* Pods_Trading_App_Trading_AppUITests.framework */; };
+		CAFDC20441863436AC5A0F08 /* Pods_Trading_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2AD9B87E8A51F3642E9370 /* Pods_Trading_AppTests.framework */; };
+		E9AE3EC77BC7BADCD8273033 /* Pods_Trading_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B4DE05990397FDFC3B2222 /* Pods_Trading_App.framework */; };
 		F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */; };
 		F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */; };
 		F3DB48062A2E2EE400AF80AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48052A2E2EE400AF80AA /* ViewController.swift */; };
@@ -16,6 +19,7 @@
 		F3DB48192A2E2EE800AF80AA /* Trading_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48182A2E2EE800AF80AA /* Trading_AppTests.swift */; };
 		F3DB48232A2E2EE800AF80AA /* Trading_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */; };
 		F3DB48252A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */; };
+		F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776882A2F35340053EFE4 /* WebSocketClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1470622A354928F534F85DEB /* Pods-Trading App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading App.debug.xcconfig"; path = "Target Support Files/Pods-Trading App/Pods-Trading App.debug.xcconfig"; sourceTree = "<group>"; };
+		1DFA4612FD3A4D5FC482D8A9 /* Pods_Trading_App_Trading_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trading_App_Trading_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49632D3CC8FE46C812A074EF /* Pods-Trading AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading AppTests.release.xcconfig"; path = "Target Support Files/Pods-Trading AppTests/Pods-Trading AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		65B4DE05990397FDFC3B2222 /* Pods_Trading_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trading_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7D8187AECD0DF46AFFF636 /* Pods-Trading App-Trading AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading App-Trading AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Trading App-Trading AppUITests/Pods-Trading App-Trading AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		947FA74BE61303FCC5EBE570 /* Pods-Trading AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Trading AppTests/Pods-Trading AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99E378DC878325850FB97690 /* Pods-Trading App-Trading AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading App-Trading AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Trading App-Trading AppUITests/Pods-Trading App-Trading AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDDB26415BD57A4FB95B3DE5 /* Pods-Trading App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading App.release.xcconfig"; path = "Target Support Files/Pods-Trading App/Pods-Trading App.release.xcconfig"; sourceTree = "<group>"; };
+		CE2AD9B87E8A51F3642E9370 /* Pods_Trading_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trading_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB47FE2A2E2EE400AF80AA /* Trading App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trading App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,7 @@
 		F3DB481E2A2E2EE800AF80AA /* Trading AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trading AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITests.swift; sourceTree = "<group>"; };
 		F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3E776882A2F35340053EFE4 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AE3EC77BC7BADCD8273033 /* Pods_Trading_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAFDC20441863436AC5A0F08 /* Pods_Trading_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6514B4638842BA983C12044 /* Pods_Trading_App_Trading_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384657E56BFA1616457DF494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65B4DE05990397FDFC3B2222 /* Pods_Trading_App.framework */,
+				1DFA4612FD3A4D5FC482D8A9 /* Pods_Trading_App_Trading_AppUITests.framework */,
+				CE2AD9B87E8A51F3642E9370 /* Pods_Trading_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6452E64F19A829C57EA82658 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1470622A354928F534F85DEB /* Pods-Trading App.debug.xcconfig */,
+				CDDB26415BD57A4FB95B3DE5 /* Pods-Trading App.release.xcconfig */,
+				99E378DC878325850FB97690 /* Pods-Trading App-Trading AppUITests.debug.xcconfig */,
+				7E7D8187AECD0DF46AFFF636 /* Pods-Trading App-Trading AppUITests.release.xcconfig */,
+				947FA74BE61303FCC5EBE570 /* Pods-Trading AppTests.debug.xcconfig */,
+				49632D3CC8FE46C812A074EF /* Pods-Trading AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F3DB47F52A2E2EE400AF80AA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				F3DB48172A2E2EE800AF80AA /* Trading AppTests */,
 				F3DB48212A2E2EE800AF80AA /* Trading AppUITests */,
 				F3DB47FF2A2E2EE400AF80AA /* Products */,
+				6452E64F19A829C57EA82658 /* Pods */,
+				384657E56BFA1616457DF494 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +148,7 @@
 				F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */,
 				F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */,
 				F3DB480F2A2E2EE800AF80AA /* Info.plist */,
+				F3E7768A2A2F36590053EFE4 /* WebSocketClient */,
 			);
 			path = "Trading App";
 			sourceTree = "<group>";
@@ -127,6 +170,14 @@
 			path = "Trading AppUITests";
 			sourceTree = "<group>";
 		};
+		F3E7768A2A2F36590053EFE4 /* WebSocketClient */ = {
+			isa = PBXGroup;
+			children = (
+				F3E776882A2F35340053EFE4 /* WebSocketClient.swift */,
+			);
+			path = WebSocketClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3DB48282A2E2EE800AF80AA /* Build configuration list for PBXNativeTarget "Trading App" */;
 			buildPhases = (
+				76EA9BDC99BB100DFB741798 /* [CP] Check Pods Manifest.lock */,
 				F3DB47FA2A2E2EE400AF80AA /* Sources */,
 				F3DB47FB2A2E2EE400AF80AA /* Frameworks */,
 				F3DB47FC2A2E2EE400AF80AA /* Resources */,
+				5D9271763BB5995060DD2D8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3DB482B2A2E2EE800AF80AA /* Build configuration list for PBXNativeTarget "Trading AppTests" */;
 			buildPhases = (
+				B069DE6E68F25CC2B57BE10E /* [CP] Check Pods Manifest.lock */,
 				F3DB48102A2E2EE800AF80AA /* Sources */,
 				F3DB48112A2E2EE800AF80AA /* Frameworks */,
 				F3DB48122A2E2EE800AF80AA /* Resources */,
@@ -169,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3DB482E2A2E2EE800AF80AA /* Build configuration list for PBXNativeTarget "Trading AppUITests" */;
 			buildPhases = (
+				207C0DAF142C145AA83B76A4 /* [CP] Check Pods Manifest.lock */,
 				F3DB481A2A2E2EE800AF80AA /* Sources */,
 				F3DB481B2A2E2EE800AF80AA /* Frameworks */,
 				F3DB481C2A2E2EE800AF80AA /* Resources */,
+				F86CAB67D7E38E1E14EA8B0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +309,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		207C0DAF142C145AA83B76A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trading App-Trading AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D9271763BB5995060DD2D8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trading App/Pods-Trading App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trading App/Pods-Trading App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trading App/Pods-Trading App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76EA9BDC99BB100DFB741798 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trading App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B069DE6E68F25CC2B57BE10E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trading AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F86CAB67D7E38E1E14EA8B0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trading App-Trading AppUITests/Pods-Trading App-Trading AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trading App-Trading AppUITests/Pods-Trading App-Trading AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trading App-Trading AppUITests/Pods-Trading App-Trading AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F3DB47FA2A2E2EE400AF80AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +419,7 @@
 			files = (
 				F3DB48062A2E2EE400AF80AA /* ViewController.swift in Sources */,
 				F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */,
+				F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */,
 				F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +592,7 @@
 		};
 		F3DB48292A2E2EE800AF80AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1470622A354928F534F85DEB /* Pods-Trading App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +620,7 @@
 		};
 		F3DB482A2A2E2EE800AF80AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDDB26415BD57A4FB95B3DE5 /* Pods-Trading App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +648,7 @@
 		};
 		F3DB482C2A2E2EE800AF80AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 947FA74BE61303FCC5EBE570 /* Pods-Trading AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +668,7 @@
 		};
 		F3DB482D2A2E2EE800AF80AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49632D3CC8FE46C812A074EF /* Pods-Trading AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +688,7 @@
 		};
 		F3DB482F2A2E2EE800AF80AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99E378DC878325850FB97690 /* Pods-Trading App-Trading AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +706,7 @@
 		};
 		F3DB48302A2E2EE800AF80AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E7D8187AECD0DF46AFFF636 /* Pods-Trading App-Trading AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
