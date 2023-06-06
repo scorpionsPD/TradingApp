@@ -10,6 +10,5 @@ import Foundation
 struct Company {
     let acronym: String
     let updatedPrice: Double
-    let difference: Double
     // Add more properties as needed
 }

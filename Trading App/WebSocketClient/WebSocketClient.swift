@@ -10,7 +10,7 @@ import Starscream
 
 class FinnhubWebSocketClient: WebSocketDelegate {
     var socket: WebSocket?
-    var didFetchedCompanyData:(([Company])->Void)?
+    var didFetchedCompanyData:((Company)->Void)?
     
     func connect() {
         let request = URLRequest(url: URL(string: "wss://ws.finnhub.io?token=chvefopr01qrqeng5q7gchvefopr01qrqeng5q80")!)
@@ -52,14 +52,9 @@ class FinnhubWebSocketClient: WebSocketDelegate {
         do {
             let tradeData = try JSONDecoder().decode(TradeData.self, from: jsonData)
             if let trade = tradeData.data.last {
-                print("Symbol: \(trade.s)")
-                print("Price: \(trade.p)")
-                print("Volume: \(trade.v)")
-                print("-----")
-                let company = Company(acronym: trade.s, updatedPrice: trade.p, difference: Double(trade.v))
-                didFetchedCompanyData?([company])
+                let company = Company(acronym: trade.s, updatedPrice: trade.p)
+                didFetchedCompanyData?(company)
             }
-            
         } catch {
             print("Error parsing JSON: \(error.localizedDescription)")
         }

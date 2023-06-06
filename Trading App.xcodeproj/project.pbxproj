@@ -23,6 +23,9 @@
 		F3E776902A2F3D620053EFE4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */; };
 		F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */; };
 		F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776952A2F4D3C0053EFE4 /* Modals.swift */; };
+		F3E776982A2F70CD0053EFE4 /* CompanyListCellViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776972A2F70CD0053EFE4 /* CompanyListCellViewModal.swift */; };
+		F3E7769A2A2F8F420053EFE4 /* CompanyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776992A2F8F420053EFE4 /* CompanyListViewModelTests.swift */; };
+		F3E7769C2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7769B2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewModel.swift; sourceTree = "<group>"; };
 		F3E776952A2F4D3C0053EFE4 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
+		F3E776972A2F70CD0053EFE4 /* CompanyListCellViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCellViewModal.swift; sourceTree = "<group>"; };
+		F3E776992A2F8F420053EFE4 /* CompanyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewModelTests.swift; sourceTree = "<group>"; };
+		F3E7769B2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				F3DB48182A2E2EE800AF80AA /* Trading_AppTests.swift */,
+				F3E776992A2F8F420053EFE4 /* CompanyListViewModelTests.swift */,
+				F3E7769B2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift */,
 			);
 			path = "Trading AppTests";
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */,
+				F3E776972A2F70CD0053EFE4 /* CompanyListCellViewModal.swift */,
 			);
 			path = ViewModal;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */,
 				F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */,
 				F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */,
+				F3E776982A2F70CD0053EFE4 /* CompanyListCellViewModal.swift in Sources */,
 				F3E776902A2F3D620053EFE4 /* MainTableViewCell.swift in Sources */,
 				F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */,
 				F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */,
@@ -472,6 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E7769C2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift in Sources */,
+				F3E7769A2A2F8F420053EFE4 /* CompanyListViewModelTests.swift in Sources */,
 				F3DB48192A2E2EE800AF80AA /* Trading_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

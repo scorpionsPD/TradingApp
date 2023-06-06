@@ -39,7 +39,7 @@ class MainScreenViewController: UIViewController {
     private func initializeWebSocket() {
         viewModel = CompanyListViewModel()
         viewModel.fetchCompanyData()
-        viewModel.needTorefresh = {
+        viewModel.needToRefresh = {
             self.tableView.reloadData()
         }
     }
@@ -69,7 +69,12 @@ extension MainScreenViewController: UITableViewDelegate,UITableViewDataSource {
         
         // Get the company for the current row
         let company = viewModel.getCompany(at: indexPath.row)
+        
         // Configure the cell
+//        cell.symbolLabel.text = "AAPL"
+//        cell.priceLabel.text = "$178.74"
+//        cell.differenceLabel.text = "+2.34 (1.32%)"
+        
         cell.cellData = company
         
         return cell

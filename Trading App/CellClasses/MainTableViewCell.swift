@@ -8,20 +8,26 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
+    
     var symbolLabel: UILabel!
     var priceLabel: UILabel!
     var differenceLabel: UILabel!
 
-    var cellData:Company? {
+    var cellData: CompanyListCellViewModel? {
         didSet {
             guard let data = cellData else {
                 return
             }
             symbolLabel.text = data.acronym
-            priceLabel.text = String(describing: data.updatedPrice)
-            differenceLabel.text = String(describing:data.difference) // Diffrence need to be calculated currentlly valume value is showing
+            priceLabel.text = data.getPrice()
+            differenceLabel.text = data.diffrenceAndPercentage
+            differenceLabel.textColor = data.getValueColor()
         }
     }
+    
+    // MARK: - Initialization
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,6 +39,8 @@ class MainTableViewCell: UITableViewCell {
         setupCell()
     }
 
+    // MARK: - Private Methods
+    
     private func setupCell() {
         // Create and configure symbol label
         symbolLabel = UILabel()
@@ -63,4 +71,5 @@ class MainTableViewCell: UITableViewCell {
         ])
     }
 }
+
 
