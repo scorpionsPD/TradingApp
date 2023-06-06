@@ -12,7 +12,6 @@
 		E9AE3EC77BC7BADCD8273033 /* Pods_Trading_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B4DE05990397FDFC3B2222 /* Pods_Trading_App.framework */; };
 		F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */; };
 		F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */; };
-		F3DB48062A2E2EE400AF80AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48052A2E2EE400AF80AA /* ViewController.swift */; };
 		F3DB48092A2E2EE400AF80AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB48072A2E2EE400AF80AA /* Main.storyboard */; };
 		F3DB480B2A2E2EE800AF80AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */; };
 		F3DB480E2A2E2EE800AF80AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */; };
@@ -20,6 +19,10 @@
 		F3DB48232A2E2EE800AF80AA /* Trading_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */; };
 		F3DB48252A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */; };
 		F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776882A2F35340053EFE4 /* WebSocketClient.swift */; };
+		F3E7768D2A2F3A550053EFE4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7768C2A2F3A550053EFE4 /* MainScreenViewController.swift */; };
+		F3E776902A2F3D620053EFE4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */; };
+		F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */; };
+		F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776952A2F4D3C0053EFE4 /* Modals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,6 @@
 		F3DB47FE2A2E2EE400AF80AA /* Trading App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trading App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3DB48052A2E2EE400AF80AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3DB48082A2E2EE400AF80AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3DB480D2A2E2EE800AF80AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,10 @@
 		F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITests.swift; sourceTree = "<group>"; };
 		F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3E776882A2F35340053EFE4 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		F3E7768C2A2F3A550053EFE4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewModel.swift; sourceTree = "<group>"; };
+		F3E776952A2F4D3C0053EFE4 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +147,12 @@
 		F3DB48002A2E2EE400AF80AA /* Trading App */ = {
 			isa = PBXGroup;
 			children = (
+				F3E776942A2F4D1C0053EFE4 /* Modals */,
+				F3E776912A2F4CCD0053EFE4 /* ViewModal */,
+				F3E7768E2A2F3CAB0053EFE4 /* CellClasses */,
+				F3E7768B2A2F3A360053EFE4 /* MainScreen */,
 				F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */,
 				F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */,
-				F3DB48052A2E2EE400AF80AA /* ViewController.swift */,
 				F3DB48072A2E2EE400AF80AA /* Main.storyboard */,
 				F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */,
 				F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */,
@@ -176,6 +185,38 @@
 				F3E776882A2F35340053EFE4 /* WebSocketClient.swift */,
 			);
 			path = WebSocketClient;
+			sourceTree = "<group>";
+		};
+		F3E7768B2A2F3A360053EFE4 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3E7768C2A2F3A550053EFE4 /* MainScreenViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F3E7768E2A2F3CAB0053EFE4 /* CellClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */,
+			);
+			path = CellClasses;
+			sourceTree = "<group>";
+		};
+		F3E776912A2F4CCD0053EFE4 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		F3E776942A2F4D1C0053EFE4 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				F3E776952A2F4D3C0053EFE4 /* Modals.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,10 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3DB48062A2E2EE400AF80AA /* ViewController.swift in Sources */,
+				F3E7768D2A2F3A550053EFE4 /* MainScreenViewController.swift in Sources */,
 				F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */,
 				F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */,
+				F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */,
+				F3E776902A2F3D620053EFE4 /* MainTableViewCell.swift in Sources */,
 				F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */,
+				F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

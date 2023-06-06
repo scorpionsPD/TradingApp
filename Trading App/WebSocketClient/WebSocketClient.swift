@@ -10,6 +10,7 @@ import Starscream
 
 class FinnhubWebSocketClient: WebSocketDelegate {
     var socket: WebSocket?
+    var didFetchedCompanyData:(([Company])->Void)?
     
     func connect() {
         let request = URLRequest(url: URL(string: "wss://ws.finnhub.io?token=chvefopr01qrqeng5q7gchvefopr01qrqeng5q80")!)
@@ -42,7 +43,7 @@ class FinnhubWebSocketClient: WebSocketDelegate {
         socket?.write(string: subscriptionData)
     }
     
-    func handleData(_ data: String) {
+    private func handleData(_ data: String) {
         // Parse the received WebSocket data
         guard let jsonData = data.data(using: .utf8) else {
             print("Error: Invalid data format")
@@ -55,6 +56,8 @@ class FinnhubWebSocketClient: WebSocketDelegate {
                 print("Price: \(trade.p)")
                 print("Volume: \(trade.v)")
                 print("-----")
+                let company = Company(acronym: trade.s, updatedPrice: trade.p, difference: Double(trade.v))
+                didFetchedCompanyData?([company])
             }
             
         } catch {
