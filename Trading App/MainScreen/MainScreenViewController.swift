@@ -77,7 +77,10 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Handle row selection
-        print("Selected row \(indexPath.row + 1)")
+        if let company = viewModel.getCompany(at: indexPath.row), let acronym = company.acronym {
+            let details = CompanyProfileViewController(companySymbol: acronym)
+            self.navigationController?.pushViewController(details, animated: true)
+        }
     }
 }
 

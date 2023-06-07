@@ -52,23 +52,31 @@ class CompanyProfileViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Visit Website", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.addTarget(CompanyProfileViewController.self, action: #selector(visitWebsite), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    private var viewModel: CompanyProfileViewModal?
+    private var viewModel = CompanyProfileViewModal()
     
-    var companySymbol: String?
+    var companySymbol: String
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        viewModel?.fetchCompanyDetail()
-        viewModel?.needToRefresh = { [weak self] in
+        viewModel.fetchCompanyDetail(symbol: companySymbol)
+        viewModel.needToRefresh = { [weak self] in
             guard let self = self else { return }
             self.configureUI()
         }
+    }
+    
+    init(companySymbol: String) {
+        self.companySymbol = companySymbol
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setupViews() {
@@ -80,6 +88,9 @@ class CompanyProfileViewController: UIViewController {
         view.addSubview(industryLabel)
         view.addSubview(marketCapLabel)
         view.addSubview(weburlButton)
+        
+        // Add target action to the weburlButton
+        weburlButton.addTarget(self, action: #selector(visitWebsite), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -109,7 +120,7 @@ class CompanyProfileViewController: UIViewController {
     }
     
     @objc private func visitWebsite() {
-        guard let companyProfile = viewModel?.companyDetail, let url = URL(string: companyProfile.weburl) else {
+        guard let companyProfile = viewModel.companyDetail, let url = URL(string: companyProfile.weburl) else {
             return
         }
         
@@ -117,7 +128,7 @@ class CompanyProfileViewController: UIViewController {
     }
     
     private func configureUI() {
-        guard let companyProfile = viewModel?.companyDetail else {
+        guard let companyProfile = viewModel.companyDetail else {
             return
         }
         DispatchQueue.main.async {

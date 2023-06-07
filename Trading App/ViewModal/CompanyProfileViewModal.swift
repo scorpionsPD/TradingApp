@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import NetworkManager
 
 class CompanyProfileViewModal {
     
     var needToRefresh:(()->Void)?
     
-    var companyDetail: CompanyProfile?
+    var companyDetail: CompanyProfile? {
+        didSet{
+            needToRefresh?()
+        }
+    }
     
     var companyName: String {
         return companyDetail?.name ?? ""
@@ -29,8 +34,16 @@ class CompanyProfileViewModal {
         return companyDetail?.finnhubIndustry ?? ""
     }
     
-    func fetchCompanyDetail() {
-        // Implement your API request here to fetch the company detail data
-        // Update the 'companyDetail' property with the fetched data
+    func fetchCompanyDetail(symbol:String) {
+        let url = String(describing: "https://finnhub.io/api/v1/stock/profile2?symbol=\(symbol)&token=chvefopr01qrqeng5q7gchvefopr01qrqeng5q80")
+        
+        NetworkManager.shared.request(urlString: url) { (result: Result<CompanyProfile, NetworkError>) in
+            switch result {
+            case .success(let data):
+                self.companyDetail = data
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

@@ -12,7 +12,6 @@
 		E9AE3EC77BC7BADCD8273033 /* Pods_Trading_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B4DE05990397FDFC3B2222 /* Pods_Trading_App.framework */; };
 		F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */; };
 		F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */; };
-		F3DB48092A2E2EE400AF80AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB48072A2E2EE400AF80AA /* Main.storyboard */; };
 		F3DB480B2A2E2EE800AF80AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */; };
 		F3DB480E2A2E2EE800AF80AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */; };
 		F3DB48192A2E2EE800AF80AA /* Trading_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48182A2E2EE800AF80AA /* Trading_AppTests.swift */; };
@@ -28,6 +27,7 @@
 		F3E7769E2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7769D2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift */; };
 		F3E776A32A2FA1EA0053EFE4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776A22A2FA1EA0053EFE4 /* MainScreenViewController.swift */; };
 		F3E776A62A2FA2660053EFE4 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */; };
+		F3E776A92A307FBF0053EFE4 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = F3E776A82A307FBF0053EFE4 /* NetworkManager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 		F3DB47FE2A2E2EE400AF80AA /* Trading App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trading App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3DB48082A2E2EE400AF80AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3DB480D2A2E2EE800AF80AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3DB480F2A2E2EE800AF80AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9AE3EC77BC7BADCD8273033 /* Pods_Trading_App.framework in Frameworks */,
+				F3E776A92A307FBF0053EFE4 /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +164,6 @@
 				F3E776A42A2FA2140053EFE4 /* CompanyProfile */,
 				F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */,
 				F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */,
-				F3DB48072A2E2EE400AF80AA /* Main.storyboard */,
 				F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */,
 				F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */,
 				F3DB480F2A2E2EE800AF80AA /* Info.plist */,
@@ -260,6 +259,9 @@
 			dependencies = (
 			);
 			name = "Trading App";
+			packageProductDependencies = (
+				F3E776A82A307FBF0053EFE4 /* NetworkManager */,
+			);
 			productName = "Trading App";
 			productReference = F3DB47FE2A2E2EE400AF80AA /* Trading App.app */;
 			productType = "com.apple.product-type.application";
@@ -335,6 +337,9 @@
 				Base,
 			);
 			mainGroup = F3DB47F52A2E2EE400AF80AA;
+			packageReferences = (
+				F3E776A72A307FBF0053EFE4 /* XCRemoteSwiftPackageReference "NetworkManager" */,
+			);
 			productRefGroup = F3DB47FF2A2E2EE400AF80AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,7 +358,6 @@
 			files = (
 				F3DB480E2A2E2EE800AF80AA /* LaunchScreen.storyboard in Resources */,
 				F3DB480B2A2E2EE800AF80AA /* Assets.xcassets in Resources */,
-				F3DB48092A2E2EE400AF80AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,14 +533,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F3DB48072A2E2EE400AF80AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3DB48082A2E2EE400AF80AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -674,7 +670,6 @@
 				INFOPLIST_FILE = "Trading App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -702,7 +697,6 @@
 				INFOPLIST_FILE = "Trading App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -834,6 +828,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3E776A72A307FBF0053EFE4 /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scorpionsPD/NetworkManager";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3E776A82A307FBF0053EFE4 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3E776A72A307FBF0053EFE4 /* XCRemoteSwiftPackageReference "NetworkManager" */;
+			productName = NetworkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3DB47F62A2E2EE400AF80AA /* Project object */;
 }
