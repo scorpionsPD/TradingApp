@@ -19,13 +19,15 @@
 		F3DB48232A2E2EE800AF80AA /* Trading_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */; };
 		F3DB48252A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */; };
 		F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776882A2F35340053EFE4 /* WebSocketClient.swift */; };
-		F3E7768D2A2F3A550053EFE4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7768C2A2F3A550053EFE4 /* MainScreenViewController.swift */; };
 		F3E776902A2F3D620053EFE4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */; };
 		F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */; };
 		F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776952A2F4D3C0053EFE4 /* Modals.swift */; };
 		F3E776982A2F70CD0053EFE4 /* CompanyListCellViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776972A2F70CD0053EFE4 /* CompanyListCellViewModal.swift */; };
 		F3E7769A2A2F8F420053EFE4 /* CompanyListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776992A2F8F420053EFE4 /* CompanyListViewModelTests.swift */; };
 		F3E7769C2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7769B2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift */; };
+		F3E7769E2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E7769D2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift */; };
+		F3E776A32A2FA1EA0053EFE4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776A22A2FA1EA0053EFE4 /* MainScreenViewController.swift */; };
+		F3E776A62A2FA2660053EFE4 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,13 +70,15 @@
 		F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITests.swift; sourceTree = "<group>"; };
 		F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3E776882A2F35340053EFE4 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
-		F3E7768C2A2F3A550053EFE4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		F3E7768F2A2F3D620053EFE4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewModel.swift; sourceTree = "<group>"; };
 		F3E776952A2F4D3C0053EFE4 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		F3E776972A2F70CD0053EFE4 /* CompanyListCellViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCellViewModal.swift; sourceTree = "<group>"; };
 		F3E776992A2F8F420053EFE4 /* CompanyListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewModelTests.swift; sourceTree = "<group>"; };
 		F3E7769B2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListCellViewModelTests.swift; sourceTree = "<group>"; };
+		F3E7769D2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewModal.swift; sourceTree = "<group>"; };
+		F3E776A22A2FA1EA0053EFE4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +160,8 @@
 				F3E776942A2F4D1C0053EFE4 /* Modals */,
 				F3E776912A2F4CCD0053EFE4 /* ViewModal */,
 				F3E7768E2A2F3CAB0053EFE4 /* CellClasses */,
-				F3E7768B2A2F3A360053EFE4 /* MainScreen */,
+				F3E776A12A2FA1EA0053EFE4 /* MainScreen */,
+				F3E776A42A2FA2140053EFE4 /* CompanyProfile */,
 				F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */,
 				F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */,
 				F3DB48072A2E2EE400AF80AA /* Main.storyboard */,
@@ -195,14 +200,6 @@
 			path = WebSocketClient;
 			sourceTree = "<group>";
 		};
-		F3E7768B2A2F3A360053EFE4 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				F3E7768C2A2F3A550053EFE4 /* MainScreenViewController.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
 		F3E7768E2A2F3CAB0053EFE4 /* CellClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +213,7 @@
 			children = (
 				F3E776922A2F4CF40053EFE4 /* CompanyListViewModel.swift */,
 				F3E776972A2F70CD0053EFE4 /* CompanyListCellViewModal.swift */,
+				F3E7769D2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift */,
 			);
 			path = ViewModal;
 			sourceTree = "<group>";
@@ -226,6 +224,22 @@
 				F3E776952A2F4D3C0053EFE4 /* Modals.swift */,
 			);
 			path = Modals;
+			sourceTree = "<group>";
+		};
+		F3E776A12A2FA1EA0053EFE4 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3E776A22A2FA1EA0053EFE4 /* MainScreenViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F3E776A42A2FA2140053EFE4 /* CompanyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */,
+			);
+			path = CompanyProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,14 +481,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3E7768D2A2F3A550053EFE4 /* MainScreenViewController.swift in Sources */,
+				F3E7769E2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift in Sources */,
 				F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */,
+				F3E776A62A2FA2660053EFE4 /* CompanyProfileViewController.swift in Sources */,
 				F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */,
 				F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */,
 				F3E776982A2F70CD0053EFE4 /* CompanyListCellViewModal.swift in Sources */,
 				F3E776902A2F3D620053EFE4 /* MainTableViewCell.swift in Sources */,
 				F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */,
 				F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */,
+				F3E776A32A2FA1EA0053EFE4 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
