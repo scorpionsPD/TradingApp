@@ -10,10 +10,12 @@ import NetworkManager
 
 class CompanyProfileViewModal {
     
-    var needToRefresh:(()->Void)?
+    // MARK: - Properties
+    
+    var needToRefresh: (() -> Void)?
     
     var companyDetail: CompanyProfile? {
-        didSet{
+        didSet {
             needToRefresh?()
         }
     }
@@ -34,10 +36,28 @@ class CompanyProfileViewModal {
         return companyDetail?.finnhubIndustry ?? ""
     }
     
-    func fetchCompanyDetail(symbol:String) {
-        let url = String(describing: "https://finnhub.io/api/v1/stock/profile2?symbol=\(symbol)&token=chvefopr01qrqeng5q7gchvefopr01qrqeng5q80")
+    // MARK: - Public Methods
+    
+    func fetchCompanyDetail(symbol: String) {
+        guard let token = ProcessInfo.processInfo.environment["FINNHUB_API_KEY"] else {
+            print("FINNHUB_API_KEY environment variable is missing")
+            return
+        }
         
-        NetworkManager.shared.request(urlString: url) { (result: Result<CompanyProfile, NetworkError>) in
+        // Construct the URL for the API request
+        var urlComponents = URLComponents(string: "https://finnhub.io/api/v1/stock/profile2")
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "symbol", value: symbol),
+            URLQueryItem(name: "token", value: token)
+        ]
+        
+        guard let url = urlComponents?.url else {
+            print("Invalid URL")
+            return
+        }
+        
+        // Send a network request to fetch the company profile data
+        NetworkManager.shared.request(urlString: url.absoluteString) { (result: Result<CompanyProfile, NetworkError>) in
             switch result {
             case .success(let data):
                 self.companyDetail = data
