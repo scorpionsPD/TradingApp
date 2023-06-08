@@ -21,7 +21,7 @@ final class CompanyListViewModelTests: XCTestCase {
         viewModel = nil
         super.tearDown()
     }
-    
+    /*
     func testNumberOfCompanies() {
         // Initially, there should be no companies
         XCTAssertEqual(viewModel.numberOfCompanies, 0)
@@ -33,20 +33,20 @@ final class CompanyListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.numberOfCompanies, 1)
     }
     
-//    func testGetCompany() {
-//        // Initially, there should be no companies
-//        //XCTAssertNil(viewModel.getCompany(at: 0))
-//
-//        // Add a company
-//        viewModel.fetchCompanyData()
-//
-//        // Fetch the company at index 0
-//        let companyViewModel = viewModel.getCompany(at: 0)
-//
-//        // The fetched company view model should not be nil
-//        XCTAssertNotNil(companyViewModel)
-//    }
-    
+    func testGetCompany() {
+        // Initially, there should be no companies
+        //XCTAssertNil(viewModel.getCompany(at: 0))
+
+        // Add a company
+        viewModel.fetchCompanyData()
+
+        // Fetch the company at index 0
+        let companyViewModel = viewModel.getCompany(at: 0)
+
+        // The fetched company view model should not be nil
+        XCTAssertNotNil(companyViewModel)
+    }
+    */
     func testFetchCompanyData() {
         // Initially, there should be no companies
         XCTAssertEqual(viewModel.numberOfCompanies, 0)

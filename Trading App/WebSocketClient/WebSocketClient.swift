@@ -9,13 +9,24 @@ import Foundation
 import Starscream
 
 class FinnhubWebSocketClient: WebSocketDelegate {
-    var socket: WebSocket?
+    private var socket: WebSocket?
+    private var subscribeSymbols: [String]?
     var didFetchedCompanyData:((Company)->Void)?
     
+    init(subscribeSymbols: [String]) {
+        if let token = ProcessInfo.processInfo.environment["FINNHUB_API_KEY"] {
+            let request = URLRequest(url: URL(string: "wss://ws.finnhub.io?token=\(token)")!)
+            socket = WebSocket(request: request)
+            socket?.delegate = self
+            socket?.connect()
+        }
+        else {
+            print("Please setup FINNHUB_API_KEY")
+        }
+        self.subscribeSymbols = subscribeSymbols
+    }
+
     func connect() {
-        let request = URLRequest(url: URL(string: "wss://ws.finnhub.io?token=chvefopr01qrqeng5q7gchvefopr01qrqeng5q80")!)
-        socket = WebSocket(request: request)
-        socket?.delegate = self
         socket?.connect()
     }
     
@@ -23,7 +34,9 @@ class FinnhubWebSocketClient: WebSocketDelegate {
         switch event {
         case .connected:
             print("WebSocket connected")
-            subscribeToData()
+            if let symbols = subscribeSymbols {
+                subscribeToData(symbols: symbols)
+            }
         case .disconnected(let reason, let code):
             print("websocket is disconnected: \(reason) with code: \(code)")
         case .text(let string):
@@ -33,15 +46,18 @@ class FinnhubWebSocketClient: WebSocketDelegate {
         }
     }
     
-    func subscribeToData() {
-        subscribe(symbol: "AAPL")
-        subscribe(symbol: "TSLA")
+    private func subscribeToData(symbols: [String]) {
+        for symbol in symbols {
+            subscribe(symbol: symbol)
+        }
     }
+
     private func subscribe(symbol: String) {
         let json = ["type": "subscribe", "symbol": symbol]
         let data = try! JSONEncoder().encode(json)
         socket?.write(data: data)
     }
+
     private func handleData(_ data: String) {
         // Parse the received WebSocket data
         guard let jsonData = data.data(using: .utf8) else {

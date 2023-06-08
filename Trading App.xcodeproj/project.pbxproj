@@ -14,7 +14,6 @@
 		F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */; };
 		F3DB480B2A2E2EE800AF80AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB480A2A2E2EE800AF80AA /* Assets.xcassets */; };
 		F3DB480E2A2E2EE800AF80AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB480C2A2E2EE800AF80AA /* LaunchScreen.storyboard */; };
-		F3DB48192A2E2EE800AF80AA /* Trading_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48182A2E2EE800AF80AA /* Trading_AppTests.swift */; };
 		F3DB48232A2E2EE800AF80AA /* Trading_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */; };
 		F3DB48252A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */; };
 		F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776882A2F35340053EFE4 /* WebSocketClient.swift */; };
@@ -28,6 +27,8 @@
 		F3E776A32A2FA1EA0053EFE4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776A22A2FA1EA0053EFE4 /* MainScreenViewController.swift */; };
 		F3E776A62A2FA2660053EFE4 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */; };
 		F3E776A92A307FBF0053EFE4 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = F3E776A82A307FBF0053EFE4 /* NetworkManager */; };
+		F3E776AC2A311BED0053EFE4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776AB2A311BED0053EFE4 /* Utility.swift */; };
+		F3E776AE2A31235C0053EFE4 /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E776AD2A31235C0053EFE4 /* UtilityTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,6 @@
 		F3DB480D2A2E2EE800AF80AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3DB480F2A2E2EE800AF80AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3DB48142A2E2EE800AF80AA /* Trading AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trading AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3DB48182A2E2EE800AF80AA /* Trading_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppTests.swift; sourceTree = "<group>"; };
 		F3DB481E2A2E2EE800AF80AA /* Trading AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trading AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB48222A2E2EE800AF80AA /* Trading_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITests.swift; sourceTree = "<group>"; };
 		F3DB48242A2E2EE800AF80AA /* Trading_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trading_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -78,6 +78,8 @@
 		F3E7769D2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewModal.swift; sourceTree = "<group>"; };
 		F3E776A22A2FA1EA0053EFE4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
+		F3E776AB2A311BED0053EFE4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		F3E776AD2A31235C0053EFE4 /* UtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		F3DB48002A2E2EE400AF80AA /* Trading App */ = {
 			isa = PBXGroup;
 			children = (
+				F3E776AA2A311BCD0053EFE4 /* Utils */,
 				F3E776942A2F4D1C0053EFE4 /* Modals */,
 				F3E776912A2F4CCD0053EFE4 /* ViewModal */,
 				F3E7768E2A2F3CAB0053EFE4 /* CellClasses */,
@@ -175,9 +178,9 @@
 		F3DB48172A2E2EE800AF80AA /* Trading AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				F3DB48182A2E2EE800AF80AA /* Trading_AppTests.swift */,
 				F3E776992A2F8F420053EFE4 /* CompanyListViewModelTests.swift */,
 				F3E7769B2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift */,
+				F3E776AD2A31235C0053EFE4 /* UtilityTests.swift */,
 			);
 			path = "Trading AppTests";
 			sourceTree = "<group>";
@@ -239,6 +242,14 @@
 				F3E776A52A2FA2660053EFE4 /* CompanyProfileViewController.swift */,
 			);
 			path = CompanyProfile;
+			sourceTree = "<group>";
+		};
+		F3E776AA2A311BCD0053EFE4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F3E776AB2A311BED0053EFE4 /* Utility.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +499,7 @@
 				F3E7769E2A2FA04F0053EFE4 /* CompanyProfileViewModal.swift in Sources */,
 				F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */,
 				F3E776A62A2FA2660053EFE4 /* CompanyProfileViewController.swift in Sources */,
+				F3E776AC2A311BED0053EFE4 /* Utility.swift in Sources */,
 				F3E776892A2F35340053EFE4 /* WebSocketClient.swift in Sources */,
 				F3E776932A2F4CF40053EFE4 /* CompanyListViewModel.swift in Sources */,
 				F3E776982A2F70CD0053EFE4 /* CompanyListCellViewModal.swift in Sources */,
@@ -502,9 +514,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E776AE2A31235C0053EFE4 /* UtilityTests.swift in Sources */,
 				F3E7769C2A2F91F30053EFE4 /* CompanyListCellViewModelTests.swift in Sources */,
 				F3E7769A2A2F8F420053EFE4 /* CompanyListViewModelTests.swift in Sources */,
-				F3DB48192A2E2EE800AF80AA /* Trading_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

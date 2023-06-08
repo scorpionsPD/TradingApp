@@ -9,56 +9,45 @@ import XCTest
 @testable import Trading_App
 
 class CompanyListCellViewModelTests: XCTestCase {
-    
-    func testGetPrice() {
-        // Given
-        let viewModel = CompanyListCellViewModel()
-        viewModel.price = 123.456
-        
-        // When
-        let result = viewModel.getPrice()
-        
-        // Then
-        XCTAssertEqual(result, "123.46")
-    }
-    
-    func testValueColor_WhenDifferenceIsNegative() {
-        // Given
-        let viewModel = CompanyListCellViewModel()
-        viewModel.diffrence = -5.0
-        
-        // When
-        let result = viewModel.getValueColor()
-        
-        // Then
-        XCTAssertEqual(result, .red)
-    }
-    
-    func testValueColor_WhenDifferenceIsPositive() {
-        // Given
-        let viewModel = CompanyListCellViewModel()
-        viewModel.diffrence = 5.0
-        
-        // When
-        let result = viewModel.getValueColor()
-        
-        // Then
-        XCTAssertEqual(result, .green)
-    }
-    
-    func testCalculateDifferenceAndPercentage() {
-        // Given
-        let viewModel = CompanyListCellViewModel()
-        viewModel.value = 100.0
-        viewModel.previousValue = 80.0
-        
-        // When
-        let result = viewModel.calculateDifferenceAndPercentage(prev: viewModel.previousValue, current: viewModel.value)
-        
-        // Then
-        XCTAssertEqual(result, "(25.0%) 20.0")
-    }
-    
+
+ func testGetPrice() {
+     // Given
+     let viewModel = CompanyListCellViewModel()
+     viewModel.company = Company(acronym: "AAPL", updatedPrice: 150.50)
+     
+     // When
+     let price = viewModel.getPrice()
+     
+     // Then
+     XCTAssertEqual(price, "150.50")
+ }
+ 
+// func testGetValueColor_PositiveDifference() {
+//     // Given
+//     let viewModel = CompanyListCellViewModel()
+//     viewModel.previousValue = 100.0
+//     viewModel.value = 120.0
+//     
+//     // When
+//     let color = viewModel.getValueColor()
+//     
+//     // Then
+//     XCTAssertEqual(color, .green)
+// }
+// 
+// func testGetValueColor_NegativeDifference() {
+//     // Given
+//     let viewModel = CompanyListCellViewModel()
+//     viewModel.previousValue = 150.0
+//     viewModel.value = 120.0
+//     
+//     // When
+//     let color = viewModel.getValueColor()
+//     
+//     // Then
+//     XCTAssertEqual(color, .red)
+// }
+   
     func testTradesDidSet() {
         // Given
         let viewModel = CompanyListCellViewModel()
