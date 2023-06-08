@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import WebKit
 
 class CompanyProfileViewController: UIViewController {
     
-    private let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+    private let logoImageView: WKWebView = {
+        let imageView = WKWebView()
+        imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -131,20 +132,19 @@ class CompanyProfileViewController: UIViewController {
         guard let companyProfile = viewModel.companyDetail else {
             return
         }
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.nameLabel.text = companyProfile.name
             self.tickerLabel.text = companyProfile.ticker
             self.industryLabel.text = companyProfile.finnhubIndustry
             self.marketCapLabel.text = "Market Cap: \(companyProfile.marketCapitalization)"
-            
-            if let logoURL = URL(string: companyProfile.logo) {
-                DispatchQueue.global().async { [weak self] in
-                    if let imageData = try? Data(contentsOf: logoURL) {
-                        let image = UIImage(data: imageData)
-                        DispatchQueue.main.async {
-                            self?.logoImageView.image = image
-                        }
-                    }
+        }
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            if let url = URL(string: companyProfile.logo){
+                let request = URLRequest(url: url)
+                DispatchQueue.main.async {
+                    self.logoImageView.load(request)
                 }
             }
         }
