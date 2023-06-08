@@ -13,7 +13,7 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Trading App"
         // Initialize the WebSocket and UITableView
         initializeWebSocket()
         initializeTableView()

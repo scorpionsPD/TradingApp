@@ -30,7 +30,7 @@ class CompanyListViewModel {
     
     // Fetch company data from the WebSocket client
     func fetchCompanyData() {
-        client = FinnhubWebSocketClient(subscribeSymbols: ["AAPL","TSLA"])
+        client = FinnhubWebSocketClient(subscribeSymbols: Constants.symbols)
         
         // Callback when company data is fetched
         client.didFetchedCompanyData = { [weak self] data in

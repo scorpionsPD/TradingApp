@@ -8,7 +8,7 @@
 import Foundation
 import Starscream
 
-class FinnhubWebSocketClient: WebSocketDelegate {
+class FinnhubWebSocketClient {
     private var socket: WebSocket?
     private var subscribeSymbols: [String]?
     var didFetchedCompanyData:((Company)->Void)?
@@ -28,22 +28,6 @@ class FinnhubWebSocketClient: WebSocketDelegate {
 
     func connect() {
         socket?.connect()
-    }
-    
-    func didReceive(event: WebSocketEvent, client: WebSocket) {
-        switch event {
-        case .connected:
-            print("WebSocket connected")
-            if let symbols = subscribeSymbols {
-                subscribeToData(symbols: symbols)
-            }
-        case .disconnected(let reason, let code):
-            print("websocket is disconnected: \(reason) with code: \(code)")
-        case .text(let string):
-            handleData(string)
-        default:
-            break
-        }
     }
     
     private func subscribeToData(symbols: [String]) {
@@ -66,7 +50,7 @@ class FinnhubWebSocketClient: WebSocketDelegate {
         }
         do {
             let tradeData = try JSONDecoder().decode(TradeData.self, from: jsonData)
-            if let trade = tradeData.data.last {
+            if let trade = tradeData.data.first {
                 let company = Company(acronym: trade.s, updatedPrice: trade.p)
                 didFetchedCompanyData?(company)
             }
@@ -76,6 +60,23 @@ class FinnhubWebSocketClient: WebSocketDelegate {
     }
 }
 
+extension FinnhubWebSocketClient: WebSocketDelegate {
+    func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) {
+        switch event {
+        case .connected:
+            print("WebSocket connected")
+            if let symbols = subscribeSymbols {
+                subscribeToData(symbols: symbols)
+            }
+        case .disconnected(let reason, let code):
+            print("websocket is disconnected: \(reason) with code: \(code)")
+        case .text(let string):
+            handleData(string)
+        default:
+            break
+        }
+    }
+}
 // MARK: Modal
 
 struct TradeData: Codable {
