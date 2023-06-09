@@ -39,7 +39,9 @@ class MainScreenViewController: UIViewController {
         // Fetch company data and update the table view
         viewModel.fetchCompanyData()
         viewModel.needToRefresh = {
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     

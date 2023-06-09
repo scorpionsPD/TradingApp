@@ -14,15 +14,28 @@ class FinnhubWebSocketClient {
     var didFetchedCompanyData:((Company)->Void)?
     
     init(subscribeSymbols: [String]) {
-        if let token = ProcessInfo.processInfo.environment["FINNHUB_API_KEY"] {
-            let request = URLRequest(url: URL(string: "wss://ws.finnhub.io?token=\(token)")!)
-            socket = WebSocket(request: request)
-            socket?.delegate = self
-            socket?.connect()
+        
+        guard let token = ProcessInfo.processInfo.environment["FINNHUB_API_KEY"] else {
+            print("FINNHUB_API_KEY environment variable is missing")
+            return
         }
-        else {
-            print("Please setup FINNHUB_API_KEY")
+        
+        // Construct the URL for the API request
+        var urlComponents = URLComponents(string: "wss://ws.finnhub.io?token=\(token)")
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "token", value: token)
+        ]
+        
+        guard let url = urlComponents?.url else {
+            print("Invalid URL")
+            return
         }
+        
+        let request = URLRequest(url: url)
+        socket = WebSocket(request: request)
+        socket?.delegate = self
+        socket?.connect()
+        
         self.subscribeSymbols = subscribeSymbols
     }
 
