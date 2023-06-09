@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F373CAA62A3367C800054844 /* WebSocketClient2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373CAA52A3367C800054844 /* WebSocketClient2.swift */; };
 		F38558EA2A32683600482C10 /* CompanyProfileViewModalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38558E92A32683600482C10 /* CompanyProfileViewModalTests.swift */; };
 		F3DB48022A2E2EE400AF80AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */; };
 		F3DB48042A2E2EE400AF80AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB48032A2E2EE400AF80AA /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F373CAA52A3367C800054844 /* WebSocketClient2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketClient2.swift; sourceTree = "<group>"; };
 		F38558E92A32683600482C10 /* CompanyProfileViewModalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewModalTests.swift; sourceTree = "<group>"; };
 		F3DB47FE2A2E2EE400AF80AA /* Trading App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trading App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB48012A2E2EE400AF80AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E776882A2F35340053EFE4 /* WebSocketClient.swift */,
+				F373CAA52A3367C800054844 /* WebSocketClient2.swift */,
 			);
 			path = WebSocketClient;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				F3E776962A2F4D3C0053EFE4 /* Modals.swift in Sources */,
 				F3E776A32A2FA1EA0053EFE4 /* MainScreenViewController.swift in Sources */,
 				F3E776B42A31D28A0053EFE4 /* Constants.swift in Sources */,
+				F373CAA62A3367C800054844 /* WebSocketClient2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
