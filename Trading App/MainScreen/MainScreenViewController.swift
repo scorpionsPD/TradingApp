@@ -22,15 +22,29 @@ class MainScreenViewController: UIViewController {
     // MARK: - View Setup
     
     private func initializeTableView() {
-        tableView = UITableView(frame: view.bounds, style: .plain)
+        // Initialize the table view
+        tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add the UITableView to the view hierarchy
+        view.addSubview(tableView)
+        
+        // Add constraints to support both orientations
+        let constraints = [
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ]
+
+        // Activate the constraints
+        NSLayoutConstraint.activate(constraints)
+        
         tableView.dataSource = self
         tableView.delegate = self
         
         // Register UITableViewCell class for reuse
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-        // Add the UITableView to the view hierarchy
-        view.addSubview(tableView)
     }
     
     private func initializeWebSocket() {
